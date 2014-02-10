@@ -1,9 +1,12 @@
 <template name="entryAccountButtons">
+  <template name="entryAccountButtons">
+ 
   {{#if currentUser}}
-
+     <li><a href="{{pathFor 'userClients'}}"><span class="glyphicon glyphicon-user"></span> Clients</a></li>
+     <li><a href="{{pathFor 'products'}}"><span class="glyphicon glyphicon-gbp"></span> Products</a></li>
     {{#if profileUrl}}
       {{#if wrapLinks}}<li>{{/if}}
-        <a class='profileLink' href='{{profileUrl}}'>{{signedInAs}}</a>
+        <a class='profileLink' href='{{profileUrl}}'><span class="glyphicon glyphicon-cog"></span> Edit Profile</a>
       {{#if wrapLinks}}</li>{{/if}}
     {{else}}
       {{#if wrapLinks}}<li>{{/if}}
@@ -11,12 +14,8 @@
       {{#if wrapLinks}}</li>{{/if}}
     {{/if}}
 
-    {{#if wrapLinks}}<li>{{/if}}
-      <a href="/sign-out">{{i18n "signOut"}}</a>
-    {{#if wrapLinks}}</li>{{/if}}
-
   {{else}}
-
+<!--
     {{#if wrapLinks}}<li>{{/if}}
       <a href="/sign-in">{{i18n "signIn"}}</a>
     {{#if wrapLinks}}</li>{{/if}}
@@ -26,6 +25,8 @@
     {{#if wrapLinks}}<li>{{/if}}
       <a href="/sign-up">{{i18n "signUp"}}</a>
     {{#if wrapLinks}}</li>{{/if}}
+
+-->
 
   {{/if}}
 </template>
