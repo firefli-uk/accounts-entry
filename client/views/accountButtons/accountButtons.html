@@ -7,6 +7,14 @@
       {{#if wrapLinks}}<li>{{/if}}
         <a class='profileLink' href='{{profileUrl}}'><span class="glyphicon glyphicon-cog"></span> Edit Profile</a>
       {{#if wrapLinks}}</li>{{/if}}
+<li class="dropdown">  
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{signedInAs}} <b class="caret"></b></a>  
+    <ul class="dropdown-menu">  
+        <li></li>  
+        <li><a href="/sign-out">Sign Out</a></li>  
+    </ul>  
+  </li>  
+
     {{else}}
       {{#if wrapLinks}}<li>{{/if}}
         <p class="navbar-text">{{signedInAs}}</p>
@@ -14,7 +22,7 @@
     {{/if}}
 
   {{else}}
-<!--
+   
     {{#if wrapLinks}}<li>{{/if}}
       <a href="/sign-in">{{i18n "signIn"}}</a>
     {{#if wrapLinks}}</li>{{/if}}
@@ -25,7 +33,6 @@
       <a href="/sign-up">{{i18n "signUp"}}</a>
     {{#if wrapLinks}}</li>{{/if}}
 
--->
 
   {{/if}}
 </template>

@@ -21,12 +21,6 @@ Template.entrySocial.events
     loginWithService = Meteor["loginWith" + capitalize(serviceName)]
     options = {}
 
-    if (Accounts.ui._options.requestPermissions[serviceName])
-      options.requestPermissions = Accounts.ui._options.requestPermissions[serviceName]
-
-    if (Accounts.ui._options.requestOfflineToken[serviceName])
-      options.requestOfflineToken = Accounts.ui._options.requestOfflineToken[serviceName]
-
     loginWithService(options, callback)
 
 capitalize = (str) ->

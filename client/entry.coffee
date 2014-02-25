@@ -2,7 +2,7 @@ AccountsEntry =
   settings:
     wrapLinks: true
     homeRoute: '/home'
-    dashboardRoute: '/dashboard'
+    dashboardRoute: '/app'
     passwordSignupFields: 'EMAIL_ONLY'
 
   config: (appConfig) ->
