@@ -1,12 +1,7 @@
 <template name="entryAccountButtons">
 
   {{#if currentUser}}
-     <li><a href="{{pathFor 'userClients'}}"><span class="glyphicon glyphicon-user"></span> Clients</a></li>
-     <li><a href="{{pathFor 'products'}}"><span class="glyphicon glyphicon-gbp"></span> Products</a></li>
-    {{#if profileUrl}}
-      {{#if wrapLinks}}<li>{{/if}}
-        <a class='profileLink' href='{{profileUrl}}'><span class="glyphicon glyphicon-cog"></span> Edit Profile</a>
-      {{#if wrapLinks}}</li>{{/if}}
+     
 <li class="dropdown">  
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{signedInAs}} <b class="caret"></b></a>  
     <ul class="dropdown-menu">  
@@ -14,12 +9,6 @@
         <li><a href="/sign-out">Sign Out</a></li>  
     </ul>  
   </li>  
-
-    {{else}}
-      {{#if wrapLinks}}<li>{{/if}}
-        <p class="navbar-text">{{signedInAs}}</p>
-      {{#if wrapLinks}}</li>{{/if}}
-    {{/if}}
 
   {{else}}
    
